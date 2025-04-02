@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        .feedback {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b66f963c-b697-421a-982a-82cd227ebeaa">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+    <div id="feedback" class="feedback"></div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const feedbackDiv = document.getElementById('feedback');
+            const form = e.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    feedbackDiv.textContent = 'Email sent successfully!';
+                    feedbackDiv.classList.remove('error');
+                    feedbackDiv.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        window.location.href = 'thank-you.html';
+                    }, 2000);
+                } else {
+                    feedbackDiv.textContent = 'Error sending email: ' + result.message;
+                    feedbackDiv.classList.add('error');
+                    feedbackDiv.style.display = 'block';
+                }
+            } catch (error) {
+                feedbackDiv.textContent = 'An error occurred. Please try again later.';
+                feedbackDiv.classList.add('error');
+                feedbackDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

